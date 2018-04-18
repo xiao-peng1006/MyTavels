@@ -20,6 +20,7 @@ namespace MyTravels
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost:44357/")
                 .Build();
     }
 }
