@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MyTravels.Models;
 
@@ -22,9 +23,24 @@ namespace MyTravels.Controllers
             return View();
         }
 
+        public IActionResult Posts()
+        {
+            ViewData["Message"] = "Here is all the posts we have.";
+
+            return View();
+        }
+
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Thank you for visiting our page!";
+
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult CreatePost()
+        {
+            ViewData["Message"] = "Create your posts.";
 
             return View();
         }
