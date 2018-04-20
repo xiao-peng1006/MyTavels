@@ -25,5 +25,7 @@ namespace MyTravels.Models
         public DateTime EndDate { get; set; }
 
         public string Description { get; set; }
+
+        public ApplicationUser User { get; set; }
     }
 }
