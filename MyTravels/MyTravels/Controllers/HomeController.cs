@@ -31,7 +31,7 @@ namespace MyTravels.Controllers
             return View();
         }
 
-        public IActionResult Posts()
+        public IActionResult Post()
         {
             ViewData["Message"] = "Here is all the posts we have.";
 
